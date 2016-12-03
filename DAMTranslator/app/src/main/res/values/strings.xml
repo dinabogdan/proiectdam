@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DAMTranslator</string>
+    <string name="act_main_btn_translate">TRANSLATE</string>
+    <string name="act_main_et_translate_hint">Enter your text here</string>
+    <string name="act_about_app_description_1">Made by:</string>
+    <string name="act_about_app_description_2">Burchi Sebastian</string>
+    <string name="act_about_app_description_3">Chihaia Alex</string>
+    <string name="act_about_app_description_4">Dina Bogdan</string>
+    <string name="act_about_app_description_5">Grupa 1066, an III</string>
 </resources>

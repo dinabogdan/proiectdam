@@ -1,16 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ase.dam.damtranslator.HomeActivity">
+    android:orientation="vertical"
+    tools:context="com.ase.dam.damtranslator.HomeActivity"
+    android:weightSum="3">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.35">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Spinner
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:textAlignment="center"
+                android:id="@+id/act_home_spn_from_lang"/>
+
+            <ImageButton
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:id="@+id/act_home_btn_switch_lang"
+                android:src="@mipmap/img_sw_lang"/>
+
+            <Spinner
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:textAlignment="center"
+                android:id="@+id/act_home_spn_to_lang"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1.125"
+        android:hint="@string/act_main_et_translate_hint"
+        android:textAlignment="center"
+        android:id="@+id/act_home_et_initial_text"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.4"
+        android:text="@string/act_main_btn_translate"
+        android:id="@+id/act_home_btn_translate"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1.125"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:id="@+id/act_home_et_result_text"/>
+</LinearLayout>
